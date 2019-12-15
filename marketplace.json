@@ -1,0 +1,16 @@
+{
+  "name": "Example marketplace item",
+  "images": [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+    "5.jpg"
+  ],
+  "description": [
+    "line1",
+    "line2",
+    "line3"
+  ],
+  "price": "FREE"
+}
