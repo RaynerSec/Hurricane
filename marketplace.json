@@ -1,39 +1,13 @@
 [
-
-
-  {
-    "name": "Example marketplace item",
-    "images": [
-      "1.jpg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg",
-      "5.jpg"
-    ],
-    "description": [
-      "line1",
-      "line2",
-      "line3"
-    ],
-    "price": "FREE"
-  },
-
-  {
-    "name": "Example 2",
-    "images": [
-      "python.jpg",
-      "java.jpg",
-      "ruby.jpg",
-      "something.jpg",
-      "javascript.jpg"
-    ],
-    "description": [
-      "super line1",
-      "super line2",
-      "super line3"
-    ],
-    "price": "2$"
-  }
-
-  
+{
+  "name": "Python GUI & BOT",
+  "image": "https://www.stickpng.com/assets/images/5848152fcef1014c0b5e4967.png",
+  "description": [
+    "Bot created by python3",
+    "Gui created by python3",
+    "It use SpectreToolKit API to connect to server",
+    "Guide coming soon.."
+  ],
+  "price": "FREE"
+}
 ]
