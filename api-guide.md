@@ -1,5 +1,6 @@
 # [SpectreToolKit - API 1.0]
 
+`Warning, please do not use special characters in the request, otherwise it will be blocked.`
 
 ###### SERVER TIME:
 **GET REQUEST:** _httр://host/api.php?server_time_
