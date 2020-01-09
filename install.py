@@ -63,6 +63,7 @@ for command in (
 
 # Install dependecies
 for package in (
+    'unzip',
     'php',
     'apache2',
     'mysql-server',
