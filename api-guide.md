@@ -1,4 +1,4 @@
-# [SpectreToolKit - API 1.0]
+# [Hurricane - API 1.0]
 
 `Warning, please do not use special characters in the request, otherwise it will be blocked.`
 
