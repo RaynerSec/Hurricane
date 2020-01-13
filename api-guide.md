@@ -283,14 +283,16 @@
          "username":"lalalalala",
          "computername":"lililili",
          "remote_ip":"XXX.XXX.XXX.XXX",
-         "last_time":"11:56 10.12.2019"
+         "last_time":"11:56 10.12.2019",
+         "online":true
       },
       {
          "uuid":"24sda943-09ad-fds3-a20d-a4f4sdb2975",
          "username":"Admin",
          "computername":"PC",
          "remote_ip":"XXX.XXX.XXX.XXX",
-         "last_time":"10:50 9.10.2019"
+         "last_time":"10:50 9.10.2019",
+         "online":false
       }
    ]
 }
