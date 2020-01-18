@@ -28,6 +28,7 @@ CREATE TABLE `logs` (
   `id` int(11) NOT NULL,
   `remote_ip` varchar(20) CHARACTER SET utf8 NOT NULL,
   `user_agent` varchar(180) CHARACTER SET utf8 NOT NULL,
+  `auth_user` varchar(200) CHARACTER SET utf8 NOT NULL,
   `last_connection` varchar(20) CHARACTER SET utf8 NOT NULL,
   `login_attempts` int(2) NOT NULL,
   `banned` tinyint(1) NOT NULL DEFAULT '0'
