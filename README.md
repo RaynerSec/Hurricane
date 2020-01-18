@@ -1,6 +1,6 @@
 # Hurricane
 ## `The program is under development. And at the moment it is not available for download!`
-
+Using your json [API](api-guide.md), you can create the connection between your client and server without opening ports, sockets, etc. In any language of programming for any device.
 
 > ## Home page It shows statistics for all users and server load.
 ![Main page](https://i.ibb.co/Mn3tR41/main.png)  
