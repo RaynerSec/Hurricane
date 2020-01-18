@@ -1,6 +1,35 @@
+
 # [Hurricane - API 1.0]
 
 `Warning, please do not use special characters in the request, otherwise it will be blocked.`
+
+
+* Server
+	* [Server time](#server-time)
+	* [Remote ip](#remote-ip)
+	* [Random uuid](#generate-random-uuid)
+	* [Server status](#server-status)
+*  Bots
+	* [Create bot](#create-bot)
+	* [Delete bot](#delete-bot)
+	* [Check bot](#check-bot)
+	* [Send command to bot](#send-command-to-bot)
+	* [Send global command to all you bots](#send-global-command-to-all-bots)
+	* [Check for commands](#check-for-commands)
+	* [Sent local response](#add-local-response-data-to-bot)
+	* [Sent global response](#add-global-response-data-to-hurricane-user)
+	* [Get local response](#get-local-response-data-from-bot)
+	* [Get global response](#get-global-response-data-from-account)
+	* [Upload file to bot directory on server](#upload-file-to-user-folder)
+	* [Read file from bot directory](#read-files-from-you-directory)
+	* [Get files list in bot directory](#get-files-list-from-bot-directory)
+	* [Remove file from bot directory](#remove-file-from-bot-directory)
+	* [Get file md5 from bot directory](#get-file-hashmd5-from-bot-directory)
+	* [Get my bots](#get-my-bots)
+* Other server commands
+	* [Login](#login)
+	* [Get token](#get-token-by-login-and-password)
+
 
 ###### SERVER TIME:
 **GET REQUEST:** _httр://host/api.php?server_time_
@@ -53,9 +82,9 @@
 > Warning! You need set you username and token in request
 > You can get you token in Remote Access Terminal. Just execute command 'token'
 
-`host`         This is ip of STK server  
-`username`     This is you account username on STK server.  
-`token`        This is you account token    on STK server.  
+`host`         This is ip of Hurricane server  
+`username`     This is you account username on Hurricane server.  
+`token`        This is you account token    on Hurricane server.  
 `bot_uuid`     This is randomly generated uuid  
 
 ###### CREATE BOT:
@@ -147,7 +176,7 @@
 }
 
 ```
-###### ADD GLOBAL RESPONSE DATA TO STK USER:
+###### ADD GLOBAL RESPONSE DATA TO Hurricane USER:
 >  If you repeat it, the old line will not be overwritten.  
 > `response` This is a data line. Which is stored on the server.  
 > `type`     If 'global'. Data string will be stored on your account.  
