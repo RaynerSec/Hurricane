@@ -30,8 +30,7 @@ CREATE TABLE `logs` (
   `user_agent` varchar(180) CHARACTER SET utf8 NOT NULL,
   `auth_user` varchar(200) CHARACTER SET utf8 NOT NULL,
   `last_connection` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `login_attempts` int(2) NOT NULL,
-  `banned` tinyint(1) NOT NULL DEFAULT '0'
+  `login_attempts` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `users` (
@@ -62,10 +61,10 @@ ALTER TABLE `bans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 ALTER TABLE `bots`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
