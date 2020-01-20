@@ -86,7 +86,7 @@ for package in (
 # MYSQL
 for command in (
         'mysql -e \"CREATE USER \'' + MYSQL_DBUSER + '\'@\'' + MYSQL_DBHOST + '\' IDENTIFIED BY \'' + MYSQL_DBPASS + '\';\"',
-        'mysql -e \"GRANT ALL PRIVILEGES ON * . * TO \'' + MYSQL_DBUSER + '\'@\'' + MYSQL_DBHOST + '\';\"',
+        'mysql -e \"GRANT  SELECT, INSERT, UPDATE, DELETE ON * . * TO \'' + MYSQL_DBUSER + '\'@\'' + MYSQL_DBHOST + '\';\"',
         'mysql -e \"FLUSH PRIVILEGES;\"',
         'mysql -u ' + MYSQL_DBUSER + ' -p' + MYSQL_DBPASS + ' -e \"CREATE DATABASE ' + MYSQL_DBNAME + ';\"',
         'mysql -u ' + MYSQL_DBUSER + ' -p' + MYSQL_DBPASS + ' ' + MYSQL_DBNAME + ' < database.sql',
