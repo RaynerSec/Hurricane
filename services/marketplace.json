@@ -2,13 +2,13 @@
    {
       "name":"Python GUI & BOT",
       "image":"https://www.stickpng.com/assets/images/5848152fcef1014c0b5e4967.png",
-      "description":[
-         "In development!",
-         "Bot created by python3",
-         "Gui created by python3",
-         "It use Hurricane API to connect to server",
-         "Guide coming soon.."
-      ],
+      "description":"This is a test 1",
       "price":"FREE"
+   },
+   {
+      "name":"C# GUI & BOT",
+      "image":"https://cdn.worldvectorlogo.com/logos/c--4.svg",
+      "description":"This is a test 2",
+      "price":"20$"
    }
 ]
