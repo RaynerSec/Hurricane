@@ -1,0 +1,14 @@
+[
+    {
+       "name":"GeoBots",
+       "link": "https://raw.githubusercontent.com/LimerBoy/Hurricane/master/plugins/GeoBots.zip",
+       "image":"https://as2.ftcdn.net/jpg/02/42/84/49/500_F_242844958_2xOqc3Hjy9honFXpOPRyfwI2ASHJMPyE.jpg",
+       "description":"Adds a new api command that gives you all the bots, but with their geolocation based on the ip address"
+    },
+    {
+       "name":"LockCMDs",
+       "link": "https://raw.githubusercontent.com/LimerBoy/Hurricane/master/plugins/LockCMDs.zip",
+       "image":"https://img.comss.net/fit-in/200x200/filters:fill(FFFFFF)/logo/fsecure-key.png",
+       "description":"You can set a password for the api command"
+    }
+ ]
